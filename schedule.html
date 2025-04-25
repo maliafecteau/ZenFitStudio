@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="height=device-height, initial-scale=1.0" />
+    <title>Schedule - ZenFit Studio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chicle&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="layout">
+      <header class="header">
+        <nav class="nav">
+          <div class="container">
+            <a href="index.html" class="logo-link">
+              <span class="logo-text">ZenFit</span>
+              <span class="logo-subtext">Studio</span>
+            </a>
+
+            <div class="nav-links" id="js-navLinks">
+              <a class="nav-link" href="classes.html">Classes</a>
+              <a class="nav-link active" href="schedule.html">Schedule</a>
+              <a class="nav-link" href="instructors.html">Instructors</a>
+            </div>
+            <a href="booking.html" class="button button-primary"
+              >Book a Class</a
+            >
+            <div class="hamburger-container" onclick="toggleMobileNav(this)">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </div>
+            <script>
+              function toggleMobileNav(x) {
+                x.classList.toggle("change");
+                var y = document.getElementById("js-navLinks");
+                if (y.style.display === "flex") {
+                  y.style.display = "none";
+                } else {
+                  y.style.display = "flex";
+                }
+              }
+              </script>
+          </div>
+        </nav>
+      </header>
+
+      <main class="main-content">
+        <section class="page-header">
+          <h1 class="page-title">Class Schedule</h1>
+          <p class="page-description">
+            Find the perfect time for your practice
+          </p>
+        </section>
+
+        <section class="schedule-container">
+          <div class="schedule-grid">
+            <div class="schedule-item">
+              <time class="schedule-time">6:00 AM</time>
+              <div class="schedule-class">
+                <h3 class="schedule-class-title">Morning Flow</h3>
+                <p class="schedule-instructor">with Sarah Chen</p>
+                <span class="schedule-duration">60 min</span>
+              </div>
+              <a href="booking.html" class="button button-primary">Book</a>
+            </div>
+
+            <div class="schedule-item">
+              <time class="schedule-time">9:00 AM</time>
+              <div class="schedule-class">
+                <h3 class="schedule-class-title">Power Yoga</h3>
+                <p class="schedule-instructor">with Mike Johnson</p>
+                <span class="schedule-duration">75 min</span>
+              </div>
+              <a href="booking.html" class="button button-primary">Book</a>
+            </div>
+
+            <div class="schedule-item">
+              <time class="schedule-time">5:30 PM</time>
+              <div class="schedule-class">
+                <h3 class="schedule-class-title">Yin Yoga</h3>
+                <p class="schedule-instructor">with Emma Wilson</p>
+                <span class="schedule-duration">90 min</span>
+              </div>
+              <button class="button button-primary">Book</button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

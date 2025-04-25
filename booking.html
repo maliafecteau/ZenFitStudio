@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="height=device-height, initial-scale=1.0" />
+    <title>Book a Class - ZenFit Studio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chicle&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="layout">
+      <header class="header">
+        <nav class="nav">
+          <div class="container">
+            <a href="index.html" class="logo-link">
+              <span class="logo-text">ZenFit</span>
+              <span class="logo-subtext">Studio</span>
+            </a>
+
+            <div class="nav-links" id="js-navLinks">
+              <a class="nav-link" href="classes.html">Classes</a>
+              <a class="nav-link" href="schedule.html">Schedule</a>
+              <a class="nav-link" href="instructors.html">Instructors</a>
+            </div>
+            <button class="button button-primary">Book a Class</button>
+            <div class="hamburger-container" onclick="toggleMobileNav(this)">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </div>
+            <script>
+              function toggleMobileNav(x) {
+                x.classList.toggle("change");
+                var y = document.getElementById("js-navLinks");
+                if (y.style.display === "flex") {
+                  y.style.display = "none";
+                } else {
+                  y.style.display = "flex";
+                }
+              }
+              </script>
+          </div>
+        </nav>
+      </header>
+
+      <main class="main-content">
+        <section class="page-header">
+          <h1 class="page-title">Book Your Class</h1>
+          <p class="page-description">Select your preferred class and time</p>
+        </section>
+
+        <section class="booking-container">
+          <form
+            id="bookingForm"
+            class="booking-form"
+            onsubmit="return handleSubmit(event)"
+          >
+            <div class="form-section">
+              <h2 class="section-title">Class Selection</h2>
+              <div class="form-group">
+                <label for="classType">Select Class Type</label>
+                <select
+                  id="classType"
+                  name="classType"
+                  required
+                  class="form-select"
+                >
+                  <option value="">Choose a class...</option>
+                  <option value="vinyasa">Vinyasa Flow</option>
+                  <option value="power">Power Yoga</option>
+                  <option value="yin">Yin Yoga</option>
+                  <option value="morning">Morning Flow</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="classDate">Select Date</label>
+                <input
+                  type="date"
+                  id="classDate"
+                  name="classDate"
+                  required
+                  class="form-input"
+                  min=""
+                  value=""
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="classTime">Select Time</label>
+                <select
+                  id="classTime"
+                  name="classTime"
+                  required
+                  class="form-select"
+                >
+                  <option value="">Choose a time...</option>
+                  <option value="06:00">6:00 AM</option>
+                  <option value="09:00">9:00 AM</option>
+                  <option value="17:30">5:30 PM</option>
+                  <option value="18:30">6:30 PM</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-section">
+              <h2 class="section-title">Personal Information</h2>
+              <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input
+                  type="text"
+                  id="fullName"
+                  name="fullName"
+                  required
+                  class="form-input"
+                  placeholder="Enter your full name"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="form-input"
+                  placeholder="Enter your email"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  class="form-input"
+                  placeholder="Enter your phone number"
+                />
+              </div>
+
+              <div class="form-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="terms" required />
+                  I agree to the terms and conditions
+                </label>
+              </div>
+            </div>
+
+            <div class="form-section">
+              <button type="submit" class="button button-primary button-large">
+                Confirm Booking
+              </button>
+            </div>
+          </form>
+
+          <div
+            id="successMessage"
+            class="success-message"
+            style="display: none"
+          >
+            <h2>Booking Confirmed! 🎉</h2>
+            <p>
+              Thank you for booking a class with ZenFit Studio. You will receive
+              a confirmation email shortly.
+            </p>
+            <a href="schedule.html" class="button button-secondary">
+              View Schedule
+            </a>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="booking.js"></script>
+  </body>
+</html>

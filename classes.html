@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="height=device-height, initial-scale=1.0" />
+  <title>Classes - ZenFit Studio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Chicle&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="layout">
+    <header class="header">
+      <nav class="nav">
+        <div class="container">
+          <a href="index.html" class="logo-link">
+            <span class="logo-text">ZenFit</span>
+            <span class="logo-subtext">Studio</span>
+          </a>
+
+          <div class="nav-links" id="js-navLinks">
+            <a class="nav-link active" href="classes.html">Classes</a>
+            <a class="nav-link" href="schedule.html">Schedule</a>
+            <a class="nav-link" href="instructors.html">Instructors</a>
+          </div>
+          <button class="button button-primary">Book a Class</button>
+          <div class="hamburger-container" onclick="toggleMobileNav(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+          <script>
+            function toggleMobileNav(x) {
+              x.classList.toggle("change");
+              var y = document.getElementById("js-navLinks");
+              if (y.style.display === "flex") {
+                y.style.display = "none";
+              } else {
+                y.style.display = "flex";
+              }
+            }
+          </script>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <section class="page-header">
+        <h1 class="page-title">Our Classes</h1>
+        <p class="page-description">
+          Discover our range of yoga and wellness classes designed for all
+          levels
+        </p>
+      </section>
+
+      <section class="classes-grid">
+        <article class="class-card">
+          <img
+            src="https://images.unsplash.com/photo-1603988363607-e1e4a66962c6?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+            alt="Vinyasa Flow" class="class-image" />
+          <div class="class-content">
+            <h2 class="class-title">Vinyasa Flow</h2>
+            <p class="class-description">
+              Dynamic sequences linking breath with movement
+            </p>
+            <p class="class-details">60 minutes • All levels</p>
+            <a href="booking.html" class="button button-primary">Book Now</a>
+          </div>
+        </article>
+
+        <article class="class-card">
+          <img
+            src="https://images.unsplash.com/photo-1663412070733-e7d0031c53f3?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Yin Yoga" class="class-image" />
+          <div class="class-content">
+            <h2 class="class-title">Yin Yoga</h2>
+            <p class="class-description">
+              Deep stretching and meditation practice
+            </p>
+            <p class="class-details">75 minutes • All levels</p>
+            <button class="button button-primary">Book Now</button>
+          </div>
+        </article>
+
+        <article class="class-card">
+          <img
+            src="https://images.unsplash.com/photo-1588783256125-254ebad5ecbe?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Power Yoga" class="class-image" />
+          <div class="class-content">
+            <h2 class="class-title">Power Yoga</h2>
+            <p class="class-description">
+              Strength-building dynamic practice
+            </p>
+            <p class="class-details">60 minutes • Intermediate</p>
+            <button class="button button-primary">Book Now</button>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>

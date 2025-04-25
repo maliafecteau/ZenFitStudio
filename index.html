@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="height=device-height, initial-scale=1.0" />
+  <title>ZenFit Studio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Chicle&family=Unbounded:wght@200..900&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="layout">
+    <header class="header">
+      <nav class="nav">
+        <div class="container">
+          <a href="index.html" class="logo-link">
+            <span class="logo-text">ZenFit</span>
+            <span class="logo-subtext">Studio</span>
+          </a>
+
+          <div class="nav-links" id="js-navLinks">
+            <a class="nav-link" href="classes.html">Classes</a>
+            <a class="nav-link" href="schedule.html">Schedule</a>
+            <a class="nav-link" href="instructors.html">Instructors</a>
+          </div>
+
+          <a href="booking.html" class="button button-primary">Book a Class</a>
+          <div class="hamburger-container" onclick="toggleMobileNav(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+          <script>
+            function toggleMobileNav(x) {
+              x.classList.toggle("change");
+              var y = document.getElementById("js-navLinks");
+              if (y.style.display === "flex") {
+                y.style.display = "none";
+              } else {
+                y.style.display = "flex";
+              }
+            }
+            </script>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="background-wrapper">
+          <img
+            src="https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80"
+            alt="Yoga studio interior" class="background-image" />
+          <div class="overlay"></div>
+        </div>
+
+        <div class="content">
+          <h1 class="title">Find Your Balance at ZenFit Studio</h1>
+          <p class="description">
+            Auckland CBD's premier studio for yoga, pilates, and mindful
+            movement
+          </p>
+          <div class="button-group">
+            <a href="booking.html" class="button button-primary button-large">
+              Book a Class
+            </a>
+            <a href="schedule.html" class="button button-secondary">
+              View Schedule
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>

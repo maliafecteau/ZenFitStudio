@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="height=device-height, initial-scale=1.0" />
+    <title>Instructors - ZenFit Studio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chicle&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="layout">
+      <header class="header">
+        <nav class="nav">
+          <div class="container">
+            <a href="index.html" class="logo-link">
+              <span class="logo-text">ZenFit</span>
+              <span class="logo-subtext">Studio</span>
+            </a>
+
+            <div class="nav-links" id="js-navLinks">
+              <a class="nav-link" href="classes.html">Classes</a>
+              <a class="nav-link" href="schedule.html">Schedule</a>
+              <a class="nav-link active" href="instructors.html">Instructors</a>
+            </div>
+            <a href="booking.html" class="button button-primary"
+              >Book a Class</a
+            >
+            <div class="hamburger-container" onclick="toggleMobileNav(this)">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </div>
+            <script>
+              function toggleMobileNav(x) {
+                x.classList.toggle("change");
+                var y = document.getElementById("js-navLinks");
+                if (y.style.display === "flex") {
+                  y.style.display = "none";
+                } else {
+                  y.style.display = "flex";
+                }
+              }
+              </script>
+          </div>
+        </nav>
+      </header>
+
+      <main class="main-content">
+        <section class="page-header">
+          <h1 class="page-title">Our Instructors</h1>
+          <p class="page-description">
+            Meet our experienced and passionate yoga teachers
+          </p>
+        </section>
+
+        <section class="instructors-grid">
+          <article class="instructor-card">
+            <img
+              src="https://images.unsplash.com/photo-1679076875671-a30b4dbc6016?q=80&w=1885&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Sarah Chen"
+              class="instructor-image"
+            />
+            <div class="instructor-content">
+              <h2 class="instructor-name">Sarah Chen</h2>
+              <p class="instructor-specialty">Vinyasa & Meditation</p>
+              <p class="instructor-bio">
+                Sarah brings 10 years of teaching experience and a deep
+                understanding of mindful movement.
+              </p>
+            </div>
+          </article>
+
+          <article class="instructor-card">
+            <img
+              src="mikejohnson.jpg"
+              alt="Mike Johnson"
+              class="instructor-image"
+            />
+            <div class="instructor-content">
+              <h2 class="instructor-name">Mike Johnson</h2>
+              <p class="instructor-specialty">Power Yoga & Strength</p>
+              <p class="instructor-bio">
+                Former athlete turned yogi, Mike specializes in
+                strength-building practices.
+              </p>
+            </div>
+          </article>
+
+          <article class="instructor-card">
+            <img
+              src="https://images.unsplash.com/photo-1667586745834-1d077ec9fe73?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Emma Wilson"
+              class="instructor-image"
+            />
+            <div class="instructor-content">
+              <h2 class="instructor-name">Emma Wilson</h2>
+              <p class="instructor-specialty">Yin Yoga & Restoration</p>
+              <p class="instructor-bio">
+                Emma's gentle approach helps students find deep relaxation and
+                healing.
+              </p>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

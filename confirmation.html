@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="height=device-height, initial-scale=1.0" />
+    <title>Booking Confirmed - ZenFit Studio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chicle&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="layout">
+      <header class="header">
+        <nav class="nav">
+          <div class="container">
+            <a href="index.html" class="logo-link">
+              <span class="logo-text">ZenFit</span>
+              <span class="logo-subtext">Studio</span>
+            </a>
+
+            <div class="nav-links" id="js-navLinks">
+              <a class="nav-link" href="classes.html">Classes</a>
+              <a class="nav-link" href="schedule.html">Schedule</a>
+              <a class="nav-link" href="instructors.html">Instructors</a>
+            </div>
+            <a href="booking.html" class="button button-primary"
+              >Book a Class</a
+            >
+            <div class="hamburger-container" onclick="toggleMobileNav(this)">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </div>
+            <script>
+              function toggleMobileNav(x) {
+                x.classList.toggle("change");
+                var y = document.getElementById("js-navLinks");
+                if (y.style.display === "flex") {
+                  y.style.display = "none";
+                } else {
+                  y.style.display = "flex";
+                }
+              }
+              </script>
+          </div>
+        </nav>
+      </header>
+
+      <main class="main-content">
+        <section class="confirmation-container">
+          <div class="confirmation-content">
+            <div class="confirmation-header">
+              <span class="confirmation-icon">✨</span>
+              <h1 class="confirmation-title">Booking Confirmed!</h1>
+              <p class="confirmation-subtitle">
+                Thank you for choosing ZenFit Studio
+              </p>
+            </div>
+
+            <div class="booking-details">
+              <h2 class="details-title">Your Class Details</h2>
+              <div class="details-grid">
+                <div class="detail-item">
+                  <span class="detail-label">Class</span>
+                  <span id="confirmedClass" class="detail-value"
+                    >Loading...</span
+                  >
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Date</span>
+                  <span id="confirmedDate" class="detail-value"
+                    >Loading...</span
+                  >
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Time</span>
+                  <span id="confirmedTime" class="detail-value"
+                    >Loading...</span
+                  >
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Name</span>
+                  <span id="confirmedName" class="detail-value"
+                    >Loading...</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="confirmation-info">
+              <p>
+                A confirmation email has been sent to
+                <span id="confirmedEmail">your email</span>
+              </p>
+              <p>Please arrive 10 minutes before your class starts</p>
+            </div>
+
+            <div class="confirmation-actions">
+              <a href="schedule.html" class="button button-secondary"
+                >View Schedule</a
+              >
+              <a href="index.html" class="button button-primary">Return Home</a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Retrieve booking details from URL parameters
+        const params = new URLSearchParams(window.location.search);
+
+        // Update confirmation details
+        document.getElementById("confirmedClass").textContent =
+          params.get("classType") || "N/A";
+        document.getElementById("confirmedDate").textContent =
+          params.get("classDate") || "N/A";
+        document.getElementById("confirmedTime").textContent =
+          params.get("classTime") || "N/A";
+        document.getElementById("confirmedName").textContent =
+          params.get("fullName") || "N/A";
+        document.getElementById("confirmedEmail").textContent =
+          params.get("email") || "your email";
+      });
+    </script>
+  </body>
+</html>
